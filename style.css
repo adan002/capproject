@@ -1,0 +1,229 @@
+
+/* log in pop up */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body {
+    background:linear-gradient(to right,blanchedalmond);
+    font-family:"Raleway",sans-serif;
+    height:100vh;
+}
+
+.center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.center button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight:600;
+    color:#222;
+    background:#1c4b1c;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    border-radius:5px;
+}
+.popup {
+    position:absolute;
+    top:-150%;
+    left:50%;
+    opacity:0;
+    transform:translate(-50%,-50%) scale(1.25);
+    width:380px;
+    padding:20px 30px;
+    background:#fff;
+    box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius:10px;
+    transition:top 0ms ease-in-out 200ms,
+               opacity 200ms ease-in-out 0ms,
+               transform 200ms ease-in-out 0ms;
+}
+.popup.active {
+    top:50%;
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);  
+    transition:top 0ms ease-in-out 0ms,
+               opacity 200ms ease-in-out 0ms,
+               transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:15px;
+    height:15px;
+    background:#1c4b1c;
+    color:#eee;
+    text-align:center;
+    line-height:15px;
+    border-radius:15px;
+    cursor: pointer;
+}
+.popup .form .form-element {
+    margin:15px 0px;
+}
+.popup .form .form-element label {
+    font-size:14px;
+    color:#222;
+}
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+    margin-top:5px;
+    display:block;
+    width:100%;
+    padding:10px;
+    outline:none;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+.popup .form .form-element input[type="checkbox"] {
+    margin-right:5px;
+}
+.popup .form .form-element button {
+    width:100%;
+    height:40px;
+    border:none;
+    outline:none;
+    font-size:16px;
+    background:#1c4b1c;
+    border-radius:10px;
+    cursor: pointer;
+}
+/* forgot password */
+.popup .form .form-element a {
+    display:block;
+    text-align:right;
+    font-size: 15px;
+    color:#1a79ca;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+/* login pop up end */
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+  
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #1c4b1c;
+}
+
+/* main image */
+body {
+    background-color: blanchedalmond;
+margin: 0;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.bg-image{
+    width: 100%;
+    padding-top: 42%;
+    background: url('https://www.muchbetteradventures.com/magazine/content/images/2021/05/Kayak-lofoten.jpeg') no-repeat center;
+    background-size:cover;
+}
+
+
+.logo{
+    color:darkgray;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color:darkgrey;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+.list{
+    display: none;
+    cursor: pointer;
+}
+.list div{
+    width:25px;
+    height: 3px;
+    background-color: darkgray;
+    margin: 5PX;
+    transition: all 0.3 ease;
+
+}
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 765px){
+    body{
+        overflow: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 95vh;
+        top: 8vh;
+        background-color: #1c4b1c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    } 
+    .nav-links li{
+        opacity: 0;
+    }
+    .list{
+        display: block;
+    }
+}
+
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    @keyframes navLinkFade{
+        from{
+                opacity: 0;
+                transform: translateX(50px);
+        }
+       to{
+                opacity: 1;
+                transform: translateX(0px);
+        }  
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+   
